@@ -2037,3 +2037,22 @@ a.post-title:hover,
   color: #ffd500;
   text-decoration: underline;
 }
+.btnWarn{
+ border-radius: 10px;
+ background-color: orangered;
+ color: whitesmoke;
+ transition: 1s;
+ border: none;
+ padding: 1% 2%;
+
+}
+.btnWarn:hover{
+  box-shadow: red 0px 0px 10px 2px;
+  transition: 1s;
+}
+.form1{
+  display: flex;
+  flex-direction: column;
+  margin: 5% 15%;
+
+}

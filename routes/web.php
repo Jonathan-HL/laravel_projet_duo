@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\FormBlogController;
+use App\Http\Controllers\FormPortofolioController;
 use App\Http\Controllers\FrontController;
 use Illuminate\Support\Facades\Route;
 
@@ -20,4 +23,7 @@ Route::get('/blog', [FrontController::class, "blog"])->name('blog');
 Route::get('/portfolio', [FrontController::class, "portfolio"])->name('portfolio');
 Route::get('/contact', [FrontController::class, "contact"])->name('contact');
 
-    //BACK ADMIN
+//BACK ADMIN
+Route::get('/dashboard',[DashboardController::class,"index"])->name(('dashboard'));
+Route::get('/formblog',[FormBlogController::class,"index"])->name('formblog');
+Route::get('/formportofolio',[FormPortofolioController::class,"index"])->name('formportofolio');

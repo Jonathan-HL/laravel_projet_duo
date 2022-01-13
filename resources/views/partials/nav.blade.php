@@ -24,6 +24,9 @@
                     <li class="{{ Request::is('contact') ? 'active' : '' }}">
                         <a href={{ route("contact") }}>Contact</a>
                     </li>
+                    <li class="{{ Request::is('dashboard') ? 'active' : '' }}">
+                        <a href={{ route("dashboard") }}>DashBoard</a>
+                    </li>
                 </ul><!-- /.navbar-nav -->
             </div><!-- /.navbar-collapse -->
 
