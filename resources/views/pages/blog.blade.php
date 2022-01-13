@@ -19,60 +19,39 @@
             </ol><!-- /.breadcrumb -->
 
             <div class="row">
+                @foreach ($blogs as $el)
 
                 <div class="col-md-9">
 
                     <div class="blog-post">
 
-                        <a href="blog-post.html"><img class="img-carousel post-img" src={{ asset("/img/portfolio-1.jpg") }} alt=""></a>
+                        <a href="blog-post.html"><img class="img-carousel post-img" src={{ asset("img/". $el -> images) }} alt=""></a>
 
                         <div class="post-content">
 
-                            <h3><a class="post-title" href="blog-post.html">Is Passion Good For Business?</a></h3>
+                            <h3><a class="post-title" href="blog-post.html">{{ $el -> titre }}</a></h3>
 
-
-                            <p class="section-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <p class="section-text">{{ $el -> descrip }}</p>
 
                         </div><!-- /.post-content -->
 
                     </div><!-- /.blog-post -->
-                    <div class="blog-post">
+                    <div class="col-md-9">
 
-                        <a href="blog-post.html"><img class="img-carousel post-img" src={{ asset("/img/portfolio-1.jpg") }} alt=""></a>
+                        <div class="blog-post">
 
-                        <div class="post-content">
+                            <a href="blog-post.html"><img class="img-carousel post-img" src={{ asset("img/". $el -> images) }} alt=""></a>
 
-                            <h3><a class="post-title" href="blog-post.html">Is Passion Good For Business?</a></h3>
+                            <div class="post-content">
 
+                                <h3><a class="post-title" href="blog-post.html">{{ $el -> titre }}</a></h3>
 
-                            <p class="section-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                <p class="section-text">{{ $el -> descrip }}</p>
 
-                        </div><!-- /.post-content -->
+                            </div><!-- /.post-content -->
 
-                    </div><!-- /.blog-post -->
-
-
-                </div>
-            </div>
-        </div>
-
-    </section><!-- /.section-blog -->
-
-    <section class="social-networks">
-
-        <div class="container-fluid">
-
-            <div class="row">
-
-                <a class="white-text black-bg twitter-bg" href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                <a class="white-text gray-bg facebook-bg" href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                <a class="white-text black-bg google-plus-bg" href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
-                <a class="white-text gray-bg message-bg" href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a>
-
-            </div>
-
-        </div>
-
+                        </div><!-- /.blog-post -->
+                @endforeach
     </section><!-- /.social-networks -->
 
 </main><!-- /.site-main -->

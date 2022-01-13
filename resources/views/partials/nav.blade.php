@@ -12,15 +12,16 @@
 
             <div class="main-menu" id="perfect-navbar-collapse">
                 <ul class="nav navbar-nav navbar-right">
-                    <li >
+                    <li class=" {{ Request::is('/') ? 'active' : '' }}">
                         <a href={{ route("home") }}>Home</a></li>
-                    <li class="active">
+                    </li>
+                    <li class="{{ Request::is('blog') ? 'active' : '' }}">
                         <a href={{ route("blog") }}>Blog </a>
                     </li>
-                    <li>
+                    <li class="{{ Request::is('portfolio') ? 'active' : '' }}">
                         <a href={{ route("portfolio") }}>Portfolio</a>
                     </li>
-                    <li>
+                    <li class="{{ Request::is('contact') ? 'active' : '' }}">
                         <a href={{ route("contact") }}>Contact</a>
                     </li>
                 </ul><!-- /.navbar-nav -->
