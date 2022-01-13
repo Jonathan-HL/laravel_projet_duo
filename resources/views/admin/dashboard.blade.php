@@ -10,8 +10,8 @@
                 <li><a href="#">Export</a></li>
             </ul> --}}
             <ul class="nav nav-sidebar">
-                <li><a href="">Form Blog</a></li>
-                <li><a href="">Form Portofolio</a></li>
+                <li><a href="{{ route('formblog') }}">Form Blog</a></li>
+                <li><a href="{{ route('formportofolio') }}">Form Portofolio</a></li>
                 {{-- <li><a href="">One more nav</a></li>
                 <li><a href="">Another nav item</a></li>
                 <li><a href="">More navigation</a></li> --}}

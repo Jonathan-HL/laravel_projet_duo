@@ -26,4 +26,4 @@ Route::get('/contact', [FrontController::class, "contact"])->name('contact');
 //BACK ADMIN
 Route::get('/dashboard',[DashboardController::class,"index"])->name(('dashboard'));
 Route::get('/formblog',[FormBlogController::class,"index"])->name('formblog');
-Route::get('/formportofolio',[FormPortofolioController::class,"index"])->name('portofolio');
+Route::get('/formportofolio',[FormPortofolioController::class,"index"])->name('formportofolio');
