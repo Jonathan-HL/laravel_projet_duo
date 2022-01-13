@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\FrontController;
 use Illuminate\Support\Facades\Route;
 
@@ -20,4 +21,5 @@ Route::get('/blog', [FrontController::class, "blog"])->name('blog');
 Route::get('/portfolio', [FrontController::class, "portfolio"])->name('portfolio');
 Route::get('/contact', [FrontController::class, "contact"])->name('contact');
 
-    //BACK ADMIN
+//BACK ADMIN
+Route::get('/dashboard',[DashboardController::class,"index"])->name(('dashboard'));
