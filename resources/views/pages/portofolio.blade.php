@@ -7,12 +7,12 @@
         <div class="container">
             <h1 class="section-title-big text-center">Portfolio</h1>
         </div>
-        
-       
-        @foreach ($portofolio as $item)
-        
+
+
+
         <div class="container-fluid">
             <div class="row" id="grid">
+                @foreach ($portofolio as $item)
                 <div class="col-lg-fifth col-md-3 col-sm-4 col-xs-6" data-groups='["uiux"]'>
                     <a class="portfolio-link" href="#">
                         <img src={{ asset("/img/portfolio-1.jpg") }} alt="" class="img-carousel">
@@ -212,7 +212,8 @@
             </div><!-- /#grid -->
 
         </div>
-        
+
+        @endforeach
     </section><!-- /.portfolio -->
     <section class="site-section-small section-work-with-us yellow-bg text-center">
 
@@ -222,12 +223,8 @@
             <a class="btn" href="#">Start Now</a>
 
         </div>
-        
+
     </section><!-- /.section-work-with-us -->
-        @endforeach
-
-
-
     <section class="social-networks">
 
         <div class="container-fluid">
@@ -240,9 +237,9 @@
                 <a class="white-text gray-bg message-bg" href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a>
 
             </div>
-            
+
         </div>
-        
+
     </section><!-- /.social-networks -->
 
 </main><!-- /.site-main -->
