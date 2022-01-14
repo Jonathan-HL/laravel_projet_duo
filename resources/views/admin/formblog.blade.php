@@ -7,7 +7,7 @@
         <li><a href="{{ route('dashboard') }}">Dashboard</a></li>
     </ul>
 </div>
-<form class="form1" method="POST" action="{{ route("dashboard.add") }}">
+<form class="form1" method="POST" action="{{ route("dashboard.add-blog") }}">
     @csrf
     <div class="form-group">
       <label for="titre">Titre</label>

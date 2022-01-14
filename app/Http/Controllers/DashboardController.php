@@ -14,7 +14,7 @@ class DashboardController extends Controller
        $allportofolio = Portofolio::all();
        return view('admin.dashboard', compact("allblog","allportofolio"));
    }
-   
+
    public function formblog()
    {
        return view("admin.formblog");
@@ -25,21 +25,29 @@ class DashboardController extends Controller
        return view("admin.formportofolio");
    }
 
-//    public function create()
-//    {
-//         return view("admin.formblog");
-//    }
-
-   public function store(Request $request)
+   public function storeblog(Request $request)
    {
        $addblog = new Blog();
        $addblog->titre = $request->titre;
        $addblog->images = $request->images;
        $addblog->descrip = $request->descrip;
        $addblog->save();
-      return view("admin.dashboard");
+      return redirect()->route("dashboard");
    }
-   public function destroy(Blog $id)
+   public function storeporto(Request $request)
+   {
+       $addporto = new Portofolio();
+       $addporto->title = $request->title;
+       $addporto->decription = $request->decription;
+       $addporto->save();
+       return redirect()->route("dashboard");
+   }
+   public function destroyblog(Blog $id)
+   {
+       $id->delete();
+       return redirect()->back();
+   }
+   public function destroyporto(Portofolio $id)
    {
        $id->delete();
        return redirect()->back();

@@ -28,9 +28,11 @@
                             <td>{{ $el->titre }}</td>
                             <td>{{ $el->image }}</td>
                             <td>{{ $el->descrip }}</td>
-                            <td>
-                                <button class="btnWarn">Delete</button>
-                            </td>
+                            <form action="{{ route("dashboard.destroy", $el->id) }}" method="POST">
+                                @csrf
+                            @method("DELETE")
+                            <td><button type="submit" class="btnWarn">Delete</button></td>
+                        </form>
                         </tr>
                         @empty
 
@@ -44,19 +46,24 @@
                         <tr>
                             <th>Id</th>
                             <th>Titre</th>
-                            <th>Image</th>
                             <th>Description</th>
                         </tr>
                     </thead>
                     <tbody>
+                        @forelse ($allportofolio as $el)
                         <tr>
-                            <td>1,001</td>
-                            <td>Lorem</td>
-                            <td>ipsum</td>
-                            <td>dolor</td>
-                            <td>
-                                <button class="btnWarn">Delete</button>
-                            </td>
+                            <td>{{ $el->id }}</td>
+                            <td>{{ $el->title }}</td>
+                            <td>{{ $el->decription }}</td>
+                            <form action="{{ route("dashboard.delete", $el->id) }}" method="POST">
+                                @csrf
+                            @method("DELETE")
+                            <td><button type="submit" class="btnWarn">Delete</button></td>
+                        </form>
+                        </tr>
+                        @empty
+
+                        @endforelse
                         </tr>
                     </tbody>
                 </table>
