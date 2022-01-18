@@ -66,4 +66,29 @@ class DashboardController extends Controller
       return view("admin.show", compact("id"));
 
    }
+   public function editblog(Blog $id){
+    $editblog = $id;
+    return view('admin.edit', compact('editblog'));
+}
+    public function updateblog(Blog $id, Request $request){
+    $updblog = $id;
+    $updblog->titre= $request->titre;
+    $updblog->images = $request->images;
+    $updblog->decription= $request->decription;
+    $updblog->save();
+    return redirect()->route("dashboard");
+}
+    public function editporto(Portofolio $id){
+    $editporto = $id;
+    return view('admin.edit', compact('editporto'));
+}
+    public function updateporto(Portofolio $id, Request $request){
+    $updporto = $id;
+    $updporto->titre= $request->titre;
+    $updporto->images = $request->images;
+    $updporto->decription= $request->decription;
+    $updporto->save();
+    return redirect()->route("dashboard");
+}
+
 }

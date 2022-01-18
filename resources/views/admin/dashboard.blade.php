@@ -26,14 +26,10 @@
                         <tr>
                             <td>{{ $el->id }}</td>
                             <td>{{ $el->titre }}</td>
-                            <td>{{ $el->image }}</td>
-                            <td>{{ $el->descrip }}</td>
+                            <td>{{ $el->images }}</td>
+                            <td>{{ $el->decription }}</td>
                             <td><button type="submit" class="btnWarn"><a href="{{ route("dashboard.showblog", $el->id) }}">Show</a></button></td>
-                            {{-- <form action="" method="POST">
-                                @csrf
-                            @method("PUT")
-                            <td><button type="submit" class="btnWarn">Edit</button></td>
-                        </form> --}}
+                            <td><button type="submit" class="btnWarn"><a href="{{ route("editblog.edit", $el->id) }}">Edit</a></button></td>
                             <form action="{{ route("dashboard.destroy", $el->id) }}" method="POST">
                                 @csrf
                             @method("DELETE")
@@ -62,6 +58,7 @@
                             <td>{{ $el->titre }}</td>
                             <td>{{ $el->decription }}</td>
                             <td><button type="submit" class="btnWarn"><a href="{{ route("dashboard.showporto", $el->id) }}">Show</a></button></td>
+                            <td><button type="submit" class="btnWarn"><a href="{{ route("editblog.edit", $el->id) }}">Edit</a></button></td>
                             <form action="{{ route("dashboard.delete", $el->id) }}" method="POST">
                                 @csrf
                             @method("DELETE")

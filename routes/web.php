@@ -35,7 +35,10 @@ Route::post('/admin/dashboard/porto',[DashboardController::class,"storeporto"])-
 Route::get('/dashboard/{id}/showblog', [DashboardController::class,"showblog"])->name("dashboard.showblog");
 Route::get('/dashboard/{id}/showporto', [DashboardController::class,"showporto"])->name("dashboard.showporto");
 // Edit
-
+Route::get('/dashboard/{id}/editblog', [DashboardController::class, 'editblog'])->name('editblog.edit');
+Route::put('/dashboard/{id}/udpateblog', [DashboardController::class, 'updateblog'])->name('updblog.update');
+Route::get('/dashboard/{id}/editporto', [DashboardController::class, 'editporto'])->name('editporto.edit');
+Route::put('/dashboard/{id}/udpateporto', [DashboardController::class, 'updateporto'])->name('updporto.update');
 // Delete
 Route::delete('/dashboard/{id}', [DashboardController::class,"destroyblog"])->name("dashboard.destroy");
 Route::delete('/dashboard/{id}/delete', [DashboardController::class,"destroyporto"])->name("dashboard.delete");
