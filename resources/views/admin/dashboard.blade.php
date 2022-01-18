@@ -62,7 +62,6 @@
                         </form>
                         </tr>
                         @empty
-
                         @endforelse
                         </tr>
                     </tbody>
