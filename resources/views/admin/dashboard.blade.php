@@ -28,12 +28,12 @@
                             <td>{{ $el->titre }}</td>
                             <td>{{ $el->images }}</td>
                             <td>{{ $el->decription }}</td>
-                            <td><button type="submit" class="btnWarn"><a href="{{ route("dashboard.showblog", $el->id) }}">Show</a></button></td>
-                            <td><button type="submit" class="btnWarn"><a href="{{ route("editblog.edit", $el->id) }}">Edit</a></button></td>
+                            <td class="btn1"><button type="submit" class="btnWarn"><a href="{{ route("dashboard.showblog", $el->id) }}">Show</a></button></td>
+                            <td class="btn1"><button type="submit" class="btnWarn"><a href="{{ route("editblog.edit", $el->id) }}">Edit</a></button></td>
                             <form action="{{ route("dashboard.destroy", $el->id) }}" method="POST">
                                 @csrf
                             @method("DELETE")
-                            <td><button type="submit" class="btnWarn">Delete</button></td>
+                            <td class="btn1"><button type="submit" class="btnWarn1">Delete</button></td>
                         </form>
                         </tr>
                         @empty
