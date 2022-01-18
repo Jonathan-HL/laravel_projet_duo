@@ -28,6 +28,12 @@
                             <td>{{ $el->titre }}</td>
                             <td>{{ $el->image }}</td>
                             <td>{{ $el->descrip }}</td>
+                            <td><button type="submit" class="btnWarn"><a href="{{ route("dashboard.showblog", $el->id) }}">Show</a></button></td>
+                            {{-- <form action="" method="POST">
+                                @csrf
+                            @method("PUT")
+                            <td><button type="submit" class="btnWarn">Edit</button></td>
+                        </form> --}}
                             <form action="{{ route("dashboard.destroy", $el->id) }}" method="POST">
                                 @csrf
                             @method("DELETE")
@@ -53,8 +59,9 @@
                         @forelse ($allportofolio as $el)
                         <tr>
                             <td>{{ $el->id }}</td>
-                            <td>{{ $el->title }}</td>
+                            <td>{{ $el->titre }}</td>
                             <td>{{ $el->decription }}</td>
+                            <td><button type="submit" class="btnWarn"><a href="{{ route("dashboard.showporto", $el->id) }}">Show</a></button></td>
                             <form action="{{ route("dashboard.delete", $el->id) }}" method="POST">
                                 @csrf
                             @method("DELETE")

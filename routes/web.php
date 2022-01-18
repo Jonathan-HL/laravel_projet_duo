@@ -25,10 +25,17 @@ Route::get('/contact', [FrontController::class, "contact"])->name('contact');
 
 //BACK ADMIN
 Route::get('/dashboard',[DashboardController::class,"index"])->name('dashboard');
+// fORM
 Route::get('/dashboard/formblog',[DashboardController::class,"formblog"])->name('formblog');
 Route::get('/dashboard/formportofolio',[DashboardController::class,"formpotofolio"])->name('formportofolio');
+// Crée
 Route::post('/admin/dashboard/blog',[DashboardController::class,"storeblog"])->name('dashboard.add-blog');
 Route::post('/admin/dashboard/porto',[DashboardController::class,"storeporto"])->name('dashboard.add-porto');
+// Show
+Route::get('/dashboard/{id}/showblog', [DashboardController::class,"showblog"])->name("dashboard.showblog");
+Route::get('/dashboard/{id}/showporto', [DashboardController::class,"showporto"])->name("dashboard.showporto");
+// Edit
+
 // Delete
 Route::delete('/dashboard/{id}', [DashboardController::class,"destroyblog"])->name("dashboard.destroy");
 Route::delete('/dashboard/{id}/delete', [DashboardController::class,"destroyporto"])->name("dashboard.delete");

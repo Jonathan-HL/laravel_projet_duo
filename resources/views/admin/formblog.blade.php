@@ -17,8 +17,8 @@
       <label for="images">Image</label>
       <input type="text" name="images" class="form-control" id="image">
     </div>
-    <label for="Description">Description</label>
-    <textarea class="form-control" name="descrip" rows="3"></textarea>
+    <label for="decription">Description</label>
+    <textarea class="form-control" name="decription" rows="3"></textarea>
     <button type="submit" class="btn btn-default">Submit</button>
   </form>
 @endsection

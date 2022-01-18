@@ -11,8 +11,8 @@
     <form class="form1" method="POST" action="{{ route("dashboard.add-porto") }}">
         @csrf
         <div class="form-group">
-          <label for="title">Titre</label>
-          <input type="text" name="title" class="form-control" id="title">
+          <label for="titre">Titre</label>
+          <input type="text" name="titre" class="form-control" id="titre">
         </div>
         <label for="decription">Description</label>
         <textarea class="form-control" name="decription" rows="3"></textarea>

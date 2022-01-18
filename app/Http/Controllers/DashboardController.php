@@ -30,26 +30,40 @@ class DashboardController extends Controller
        $addblog = new Blog();
        $addblog->titre = $request->titre;
        $addblog->images = $request->images;
-       $addblog->descrip = $request->descrip;
+       $addblog->decription = $request->decription;
        $addblog->save();
       return redirect()->route("dashboard");
    }
+
    public function storeporto(Request $request)
    {
        $addporto = new Portofolio();
-       $addporto->title = $request->title;
+       $addporto->titre = $request->titre;
        $addporto->decription = $request->decription;
        $addporto->save();
        return redirect()->route("dashboard");
    }
+
    public function destroyblog(Blog $id)
    {
        $id->delete();
        return redirect()->back();
    }
+
    public function destroyporto(Portofolio $id)
    {
        $id->delete();
        return redirect()->back();
+   }
+
+   public function showblog(Blog $id)
+   {
+       return view("admin.show", compact("id"));
+   }
+
+   public function showporto(Portofolio $id)
+   {
+      return view("admin.show", compact("id"));
+
    }
 }
