@@ -57,12 +57,12 @@
                             <td>{{ $el->id }}</td>
                             <td>{{ $el->titre }}</td>
                             <td>{{ $el->decription }}</td>
-                            <td><button type="submit" class="btnWarn"><a href="{{ route("dashboard.showporto", $el->id) }}">Show</a></button></td>
-                            <td><button type="submit" class="btnWarn"><a href="{{ route("editblog.edit", $el->id) }}">Edit</a></button></td>
+                            <td class="btn1"><button type="submit" class="btnWarn"><a href="{{ route("dashboard.showporto", $el->id) }}">Show</a></button></td>
+                            <td class="btn1"><button type="submit" class="btnWarn"><a href="{{ route("editblog.edit", $el->id) }}">Edit</a></button></td>
                             <form action="{{ route("dashboard.delete", $el->id) }}" method="POST">
                                 @csrf
                             @method("DELETE")
-                            <td><button type="submit" class="btnWarn">Delete</button></td>
+                            <td class="btn1"><button type="submit" class="btnWarn1">Delete</button></td>
                         </form>
                         </tr>
                         @empty
